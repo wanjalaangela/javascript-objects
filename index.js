@@ -105,6 +105,7 @@ return this.completedLessons.unshift(lesson)
 
 const course = new Course("Economics",["statistics","accounting","business law"],[]);
 console.log(course.markComplete("Statistics"));
+console.log(course.getProgress())
 
 
 
