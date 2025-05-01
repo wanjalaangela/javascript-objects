@@ -24,7 +24,6 @@ this.averageSteps = function(){
 };
 const user =new User("Angela",[1000,1500,500,2000,1200]);
 console.log(user.totalSteps());
-// user.averageSteps();
 console.log(user.averageSteps());
 
 
@@ -92,8 +91,20 @@ console.log(playlist.listSongs());
 
 function Course (title,lessons,completedLessons){
     this.title = title;
-    this.lessons = lessons
+    this.lessons = lessons;
+    this.completedLessons = completedLessons;
+    this.markComplete = function(lesson){
+return this.completedLessons.unshift(lesson)
+    }
+    this.getProgress = function(){
+        let myCompletedLessons=this.completedLessons.length
+        let allLessons = this.lessons.length
+        return (`Dear customer you have ${myCompletedLessons} out of ${lessons} lessons completed`)
+    }
 }
+
+const course = new Course("Economics",["statistics","accounting","business law"],[]);
+console.log(course.markComplete("Statistics"));
 
 
 
