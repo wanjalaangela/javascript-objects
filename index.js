@@ -1,30 +1,34 @@
 // Create a User object with properties like name, stepsWalked (an array of daily steps), and a method totalSteps()
 //  that calculates and returns the total number of steps walked. Add another method averageSteps() that returns the average steps per day.
-        //    create constructor user 
+        //    create object user 
         // create an array called stepsWalked 
         // add method totalsteps
         // sum of all steps(use for )
         // add method averageSteps(sum of all steps divided by length of steps)
-
-
-function User (name, stepsWalked){
-    this.name = name;
-    this.stepsWalked = stepsWalked;
-   this. totalSteps=function(){
+const user = {
+    name: "Angela",
+    stepsWalked: [1000,1500,500,2000,1200],
+    totalSteps: function(){
         let sumOfSteps = 0
-        for (let i = 0; i < stepsWalked.length; i++){
+        for (let i = 0; i <this.stepsWalked.length ; i++){
             sumOfSteps+=this.stepsWalked[i];
+        
+       
         }
-    return sumOfSteps
+        return sumOfSteps
+    },
+    averageSteps: function(){
+        
+            let aveg=this.totalSteps()/this.stepsWalked.length;
+           return aveg
+        }
+       
     };
 
-this.averageSteps = function(){
-    return this.totalSteps()/this.stepsWalked.length;
-}
-};
-const user =new User("Angela",[1000,1500,500,2000,1200]);
 console.log(user.totalSteps());
 console.log(user.averageSteps());
+
+
 
 
 
@@ -51,6 +55,11 @@ console.log(recipe.isQuickMeal());
 
 // Create a Car object with properties like model, mileage, and serviceHistory (an array of service dates). 
 // Add a method addService(date) to add a new service record, and lastServiceDate() to return the most recent service date.
+
+// create an object car with the following properties
+// model (string),mileage,serviceHistory
+// addService method use .push
+// lastServiceDate(find the date at index -1)
 const car = {
     model: "Jeep",
     mileage: "85,500 km",
@@ -68,6 +77,12 @@ console.log(car.lastServiceDate());
 
 // Create a Playlist object with a property songs (an array of song titles). Add methods addSong(title) to add a song, 
 // removeSong(title) to delete one, and listSongs() to log all songs currently in the playlist.
+
+// create an object
+// input the property songs(array)
+// add a method addSong(use .push)
+// for deleting use shift
+// add another method that returns an array of songs
 
 const playlist = {
     songs: ["Night changes","You and I","Steal my girl","Forever","Drag me down"],
@@ -91,8 +106,9 @@ console.log(playlist.listSongs());
 // and a method getProgress() that returns a string like "3 out of 5 lessons completed".
 
 
-// create a constructor Course
-// 
+// create a constructor Course(takes in title,lessons,completedLessons)
+// add method getProgress(create two variables,one shows the number of lessons completed and the other number of lessons required)
+// return a string with completed lesson and total lessons
 
 function Course (title,lessons,completedLessons){
     this.title = title;
@@ -111,8 +127,6 @@ return this.completedLessons.unshift(lesson)
 const course = new Course("Economics",["statistics","accounting","business law"],[]);
 console.log(course.markComplete("Statistics"));
 console.log(course.getProgress())
-
-
 
 
 
