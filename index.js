@@ -99,7 +99,7 @@ return this.completedLessons.unshift(lesson)
     this.getProgress = function(){
         let myCompletedLessons=this.completedLessons.length
         let allLessons = this.lessons.length
-        return (`Dear customer you have ${myCompletedLessons} out of ${lessons} lessons completed`)
+        return (`Dear customer you have ${myCompletedLessons} out of ${allLessons} lessons completed`)
     }
 }
 
