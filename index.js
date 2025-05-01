@@ -1,6 +1,6 @@
 // Create a User object with properties like name, stepsWalked (an array of daily steps), and a method totalSteps()
 //  that calculates and returns the total number of steps walked. Add another method averageSteps() that returns the average steps per day.
-        //    create constructor user that takes in
+        //    create constructor user 
         // create an array called stepsWalked 
         // add method totalsteps
         // sum of all steps(use for )
@@ -31,7 +31,9 @@ console.log(user.averageSteps());
 // Create a Recipe constructor with name, ingredients (array), and cookTime in minutes. Add a method displayRecipe() that logs the name 
 // and all ingredients in a readable list, and another method isQuickMeal() that returns true if cookTime is 30 minutes or less.
 
-
+// constructor Recipe
+// input the properties and methods
+// return a statement with name and list of all ingredients
 function Recipe(name,ingredients,cookTime){
     this.name = name;
     this.ingredients = ingredients;
@@ -88,6 +90,9 @@ console.log(playlist.listSongs());
 // Create a Course constructor with title, lessons (an array), and completedLessons (array). Add a method markComplete(lesson) that adds the lesson to completedLessons, 
 // and a method getProgress() that returns a string like "3 out of 5 lessons completed".
 
+
+// create a constructor Course
+// 
 
 function Course (title,lessons,completedLessons){
     this.title = title;
